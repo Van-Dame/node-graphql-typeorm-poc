@@ -12,11 +12,12 @@
     "experimentalDecorators": true,
     "noEmitOnError": true,
     "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": false,
     "pretty": true,
     "removeComments": true,
     "sourceMap": true,
     "strict": true,
-    "strictPropertyInitialization": true
+
+    "noImplicitAny": false,
+    "strictPropertyInitialization": false
   }
 }

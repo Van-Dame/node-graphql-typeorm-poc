@@ -3,7 +3,9 @@
   "extends": ["tslint:latest", "tslint-config-prettier"],
   "jsRules": {},
   "rules": {
-    "member-access": true
+    "member-access": false,
+    "member-ordering": false,
+    "no-console": false
   },
   "rulesDirectory": []
 }
