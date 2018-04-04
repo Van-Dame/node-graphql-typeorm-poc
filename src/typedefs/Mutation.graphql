@@ -1,0 +1,14 @@
+# import ProfileInput from 'Profile.graphql'
+
+type Mutation {
+  createUser(firstName: String!, lastName: String!, email: String!, isAdmin: Boolean, profile: ProfileInput): User!
+  updateUser(
+    id: Int!
+    firstName: String
+    localhost: String
+    email: String
+    isAdmin: Boolean
+    profile: ProfileInput
+  ): Boolean
+  deleteUser(id: Int!): Boolean
+}

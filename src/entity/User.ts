@@ -1,18 +1,39 @@
-import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  BaseEntity,
+  Column,
+  CreateDateColumn,
+  Entity,
+  JoinColumn,
+  OneToOne,
+  PrimaryGeneratedColumn,
+  UpdateDateColumn
+} from 'typeorm';
+import { Profile } from './Profile';
 
 @Entity()
 export class User extends BaseEntity {
   @PrimaryGeneratedColumn() id: number;
 
-  @Column({ length: 100 })
+  @Column('varchar', { length: 100 })
   firstName: string;
 
-  @Column({ length: 100 })
+  @Column('varchar', { length: 100 })
   lastName: string;
 
-  @Column({ length: 200, unique: true })
+  @Column('varchar', { length: 200, unique: true })
   email: string;
 
-  @Column({ default: false })
+  @Column('boolean', { default: false })
   isAdmin: boolean;
+
+  @CreateDateColumn() createdAt: Date;
+
+  @UpdateDateColumn() updatedAt: Date;
+
+  @Column({ nullable: true })
+  profileId: number;
+
+  @OneToOne(() => Profile)
+  @JoinColumn()
+  profile: Profile;
 }

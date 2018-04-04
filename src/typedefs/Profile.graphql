@@ -1,0 +1,14 @@
+# import DateTime from 'DateTime.graphql'
+
+type Profile {
+  id: Int!
+  gender: String!
+  photo: String
+  createdAt: DateTime!
+  updatedAt: DateTime
+}
+
+input ProfileInput {
+  gender: String
+  photo: String
+}

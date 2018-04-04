@@ -2,12 +2,18 @@
   "include": ["./src/**/*.ts", "./src/**/*.tsx"],
   "exclude": ["node_modules"],
   "compilerOptions": {
+    "baseUrl": ".",
     "outDir": "dist",
+    "paths": {
+      "*": ["./node_modules/*", "./src/types/*"]
+    },
+
     "target": "es6",
     "lib": ["dom", "es2017", "esnext.asynciterable"],
     "module": "commonjs",
     "moduleResolution": "node",
 
+    "esModuleInterop": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "noEmitOnError": true,

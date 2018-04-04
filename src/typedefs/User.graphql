@@ -1,0 +1,14 @@
+# import DateTime from 'DateTime.graphql'
+# import Profile from 'Profile.graphql'
+
+type User {
+  id: Int!
+  firstName: String!
+  lastName: String!
+  email: String!
+  isAdmin: Boolean
+  createdAt: DateTime!
+  updatedAt: DateTime
+  profileId: Int
+  profile: Profile
+}

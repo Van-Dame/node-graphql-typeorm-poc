@@ -2,10 +2,16 @@
   "name": "node-ts-gql-poc",
   "version": "0.0.1",
   "description": "Node/Typescript/GraphQL Proof-of-Concept",
-  "keywords": ["node", "typescript", "graphql"],
+  "keywords": [
+    "node",
+    "typescript",
+    "graphql"
+  ],
   "author": "Anurag Mishra <anurag.mishra@jykra.com>",
   "license": "UNLICENSED",
   "dependencies": {
+    "graphql-import": "^0.5.0",
+    "graphql-iso-date": "^3.5.0",
     "graphql-yoga": "^1.7.1",
     "pg": "^7.4.1",
     "reflect-metadata": "^0.1.10",
@@ -18,7 +24,7 @@
     "ts-node": "3.3.0",
     "tslint": "^5.9.1",
     "tslint-config-prettier": "^1.10.0",
-    "typescript": "2.5.2"
+    "typescript": "^2.8.1"
   },
   "scripts": {
     "start": "nodemon --exec ts-node src/index.ts"
