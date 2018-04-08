@@ -1,5 +1,5 @@
-import { User } from '../entity/User';
-import { Profile } from '../entity/Profile';
+import { User } from '../../entities/User';
+import { Profile } from '../../entities/Profile';
 
 export default {
   createUser: async (_, args) => {

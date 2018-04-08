@@ -1,0 +1,10 @@
+# import User from 'User.graphql'
+# import Post from 'Post.graphql'
+
+type Vote {
+  userId: Int!
+  postId: Int!
+  value: Int! 
+  user: User!
+  post: Post[]
+}

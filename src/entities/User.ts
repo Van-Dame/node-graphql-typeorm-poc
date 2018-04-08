@@ -6,9 +6,12 @@ import {
   JoinColumn,
   OneToOne,
   PrimaryGeneratedColumn,
-  UpdateDateColumn
+  UpdateDateColumn,
+  OneToMany
 } from 'typeorm';
 import { Profile } from './Profile';
+import { Post } from './Post';
+import { Vote } from './Vote';
 
 @Entity()
 export class User extends BaseEntity {
@@ -33,7 +36,13 @@ export class User extends BaseEntity {
   @Column({ nullable: true })
   profileId: number;
 
-  @OneToOne(() => Profile)
+  @OneToOne(type => Profile, { eager: true, cascadeAll: true })
   @JoinColumn()
   profile: Profile;
+
+  @OneToMany(type => Post, post => post.user)
+  posts: Post[];
+
+  @OneToMany(type => Vote, vote => vote.user)
+  votes: Vote[];
 }

@@ -1,0 +1,14 @@
+# import DateTime from 'DateTime.graphql'
+# import User from 'User.graphql'
+# import Vote from 'Vote.graphql'
+
+type Post {
+  id: Int!
+  title: String!
+  contents: String!
+  createdAt: DateTime!
+  updatedAt: DateTime
+  userId: Int!
+  user: User!
+  votes: Vote[]
+}

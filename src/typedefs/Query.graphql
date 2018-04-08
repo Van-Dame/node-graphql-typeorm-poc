@@ -1,7 +1,12 @@
-# import User from 'User.graphql'
+# import User from 'entities/User.graphql'
+# import Post from 'entities/Post.graphql'
 
 type Query {
   hello(name: String): String!
+
   user(id: Int!): User!
   users: [User!]!
+
+  post(id: Int!): Post!
+  posts: [Post!]!
 }
