@@ -10,5 +10,5 @@ type Post {
   updatedAt: DateTime
   userId: Int!
   user: User!
-  votes: Vote[]
+  votes: [Vote]
 }

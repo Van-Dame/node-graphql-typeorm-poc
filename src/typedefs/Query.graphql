@@ -6,6 +6,7 @@ type Query {
 
   user(id: Int!): User!
   users: [User!]!
+  currentUser: User
 
   post(id: Int!): Post!
   posts: [Post!]!

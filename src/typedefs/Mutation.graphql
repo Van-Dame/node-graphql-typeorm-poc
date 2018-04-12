@@ -1,15 +1,13 @@
-# import ProfileInput from 'Profile.graphql'
+# import Token from 'entities/Token.graphql'
+# import ProfileInput from 'entities/Profile.graphql'
 
 type Mutation {
-  createUser(firstName: String!, lastName: String!, email: String!, isAdmin: Boolean, profile: ProfileInput): User!
-  updateUser(
-    id: Int!
-    firstName: String
-    localhost: String
-    email: String
-    isAdmin: Boolean
-    profile: ProfileInput
-  ): Boolean
+  register(email: String!, password: String!, profile: ProfileInput): Token!
+  login(email: String!, password: String!): Token!
+  logout: Boolean
+
+  createUser(email: String!, isAdmin: Boolean, profile: ProfileInput): User!
+  updateUser(id: Int!, email: String, password: String, isAdmin: Boolean, profile: ProfileInput): Boolean
   deleteUser(id: Int!): Boolean
 
   createPost(title: String!, contents: String!): Post!

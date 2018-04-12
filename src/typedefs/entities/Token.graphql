@@ -1,0 +1,7 @@
+# import User from 'User.graphql'
+
+type Token {
+  value: String!
+  createdAt: DateTime!
+  user: User!
+}

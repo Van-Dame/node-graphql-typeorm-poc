@@ -1,6 +1,6 @@
 import { GraphQLDateTime } from 'graphql-iso-date';
 
-import { IResolverMap } from '../types/ResolverType';
+import { IResolverMap } from '../types/ResolverTypes';
 
 import Query from './queries';
 import Mutation from './mutations';

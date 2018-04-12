@@ -4,7 +4,7 @@
 type Vote {
   userId: Int!
   postId: Int!
-  value: Int! 
+  value: Int!
   user: User!
-  post: Post[]
+  post: [Post]
 }

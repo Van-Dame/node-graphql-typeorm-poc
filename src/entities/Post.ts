@@ -25,7 +25,7 @@ export class Post extends BaseEntity {
 
   @Column() userId: number;
 
-  @ManyToOne(type => User, user => user.posts, { eager: true, cascadeRemove: true })
+  @ManyToOne(type => User, user => user.posts, { cascadeRemove: true })
   @JoinColumn()
   user: User;
 

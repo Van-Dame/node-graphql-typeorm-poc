@@ -5,14 +5,12 @@
 
 type User {
   id: Int!
-  firstName: String!
-  lastName: String!
   email: String!
   isAdmin: Boolean
   createdAt: DateTime!
   updatedAt: DateTime
   profileId: Int
   profile: Profile
-  posts: Post[]
-  votes: Vote[]
+  posts: [Post]
+  votes: [Vote]
 }

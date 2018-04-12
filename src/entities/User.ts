@@ -12,19 +12,18 @@ import {
 import { Profile } from './Profile';
 import { Post } from './Post';
 import { Vote } from './Vote';
+import { Token } from './Token';
 
 @Entity()
 export class User extends BaseEntity {
   @PrimaryGeneratedColumn() id: number;
 
-  @Column('varchar', { length: 100 })
-  firstName: string;
-
-  @Column('varchar', { length: 100 })
-  lastName: string;
-
   @Column('varchar', { length: 200, unique: true })
   email: string;
+
+  @Column() salt: string;
+
+  @Column() passwordHash: string;
 
   @Column('boolean', { default: false })
   isAdmin: boolean;
@@ -36,7 +35,7 @@ export class User extends BaseEntity {
   @Column({ nullable: true })
   profileId: number;
 
-  @OneToOne(type => Profile, { eager: true, cascadeAll: true })
+  @OneToOne(type => Profile, { cascadeAll: true })
   @JoinColumn()
   profile: Profile;
 
@@ -45,4 +44,7 @@ export class User extends BaseEntity {
 
   @OneToMany(type => Vote, vote => vote.user)
   votes: Vote[];
+
+  @OneToMany(type => Token, token => token.user)
+  tokens: Token[];
 }

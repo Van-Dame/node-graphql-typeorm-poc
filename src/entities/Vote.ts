@@ -17,7 +17,8 @@ export class Vote extends BaseEntity {
   @PrimaryColumn() userId: number;
   @PrimaryColumn() postId: number;
 
-  @Column() value: number;
+  @Column({ default: 1 })
+  value: number;
 
   @ManyToOne(type => User, user => user.votes, { cascadeRemove: true })
   @JoinColumn()

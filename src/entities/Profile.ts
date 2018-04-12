@@ -9,6 +9,12 @@ enum Gender {
 export class Profile extends BaseEntity {
   @PrimaryGeneratedColumn() id: number;
 
+  @Column('varchar', { length: 100 })
+  firstName: string;
+
+  @Column('varchar', { length: 100 })
+  lastName: string;
+
   @Column('varchar') gender: Gender;
 
   @Column('varchar', { nullable: true })
