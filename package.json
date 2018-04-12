@@ -1,15 +1,10 @@
 {
-  "name": "node-ts-gql-poc",
+  "name": "node-graphql-typeorm-poc",
   "version": "0.0.1",
   "description": "Node/Typescript/GraphQL Proof-of-Concept",
-  "keywords": [
-    "node",
-    "typescript",
-    "graphql",
-    "typeorm"
-  ],
+  "keywords": ["node", "graphql", "typeorm", "typescript"],
   "author": "Anurag Mishra <anurag.mishra@jykra.com>",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "dependencies": {
     "bcrypt": "^2.0.0",
     "dotenv": "^5.0.1",
