@@ -2,5 +2,6 @@
 # import User from 'entities/User.graphql'
 # import Post from 'entities/Post.graphql'
 # import Vote from 'entities/Vote.graphql'
+# import Directive from 'Directive.graphql'
 # import Query from 'Query.graphql'
 # import Mutation from 'Mutation.graphql'

@@ -6,6 +6,7 @@ import dotenv from 'dotenv';
 
 import typeDefs from './typedefs';
 import resolvers from './resolvers';
+import directiveResolvers from './directiveResolvers';
 import context from './context';
 
 dotenv.config();
@@ -17,6 +18,7 @@ if (typeof process.env.JWT_SECRET_KEY === 'undefined') {
 const server = new GraphQLServer({
   typeDefs,
   resolvers,
+  directiveResolvers,
   context: async params => context(params.request.headers, process.env)
 });
 createConnection().then(() => server.start(() => console.log('Server is running on localhost:' + server.options.port)));

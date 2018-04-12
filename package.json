@@ -11,11 +11,11 @@
   "author": "Anurag Mishra <anurag.mishra@jykra.com>",
   "license": "UNLICENSED",
   "dependencies": {
-    "@types/jsonwebtoken": "^7.2.6",
     "bcrypt": "^2.0.0",
     "dotenv": "^5.0.1",
     "graphql-import": "^0.5.0",
     "graphql-iso-date": "^3.5.0",
+    "graphql-tools": "^2.24.0",
     "graphql-yoga": "^1.7.1",
     "jsonwebtoken": "^8.2.1",
     "pg": "^7.4.1",
@@ -25,6 +25,7 @@
   "devDependencies": {
     "@types/bcrypt": "^1.0.0",
     "@types/dotenv": "^4.0.3",
+    "@types/jsonwebtoken": "^7.2.6",
     "@types/node": "^8.0.29",
     "@types/ws": "^4.0.2",
     "nodemon": "^1.17.3",

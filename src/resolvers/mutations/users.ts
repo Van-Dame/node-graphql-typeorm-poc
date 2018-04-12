@@ -43,7 +43,6 @@ export default {
 
     return token;
   },
-
   login: async (_, { email, password }, { secrets }) => {
     const user = await User.findOne({ where: { email }, relations: ['profile'] });
     if (!user) {
@@ -59,7 +58,6 @@ export default {
 
     return token;
   },
-
   logout: async (_, args, context, info) => {
     console.dir(_, args, context, info);
   },

@@ -1,0 +1,3 @@
+directive @isAuthenticated on FIELD | FIELD_DEFINITION
+
+directive @hasRole(role: String) on FIELD | FIELD_DEFINITION

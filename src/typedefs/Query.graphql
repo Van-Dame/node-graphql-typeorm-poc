@@ -4,10 +4,10 @@
 type Query {
   hello(name: String): String!
 
-  user(id: Int!): User!
-  users: [User!]!
+  user(id: Int!): User! @isAuthenticated
+  users: [User!]! @isAuthenticated
   currentUser: User
 
-  post(id: Int!): Post!
-  posts: [Post!]!
+  post(id: Int!): Post! @isAuthenticated
+  posts: [Post!]! @isAuthenticated
 }
